@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Próba animacji interfejsu — ZOVU</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:#0D0F13; color:#E9EAEC;
+    font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    line-height:1.55;
+  }
+  .wrap { max-width:900px; margin:0 auto; padding:40px 20px 80px; }
+  header { border-bottom:1px solid #232830; padding-bottom:22px; margin-bottom:32px; }
+  h1 { font-size:21px; margin:0 0 6px; font-weight:600; letter-spacing:-0.01em; }
+  .sub { color:#878D97; font-size:14.5px; margin:0; }
+  .kol { display:grid; grid-template-columns:minmax(240px,300px) 1fr; gap:34px; align-items:start; }
+  @media (max-width:720px){ .kol{ grid-template-columns:1fr; } }
+  video { width:100%; border-radius:12px; border:1px solid #232830; background:#000; display:block; }
+  h2 { font-size:16px; font-weight:600; margin:0 0 10px; }
+  ul { margin:0 0 18px; padding-left:19px; }
+  li { margin-bottom:7px; font-size:14.5px; }
+  .note { margin-top:34px; padding-top:24px; border-top:1px solid #232830; font-size:14.5px; color:#878D97; max-width:66ch; }
+  .note strong { color:#E9EAEC; font-weight:600; }
+  .note p { margin:0 0 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Próba animacji interfejsu — 10 sekund</h1>
+    <p class="sub">Zrobiona na własnej makiecie, bez zobowiązań. 1080 × 1920, 50 kl/s.</p>
+  </header>
+
+  <div class="kol">
+    <video src="proba-interfejs.mp4" controls preload="metadata" playsinline></video>
+
+    <div>
+      <h2>Co jest w środku</h2>
+      <ul>
+        <li><b>0–2 s</b> — telefon wjeżdża w kadr z lekkim obrotem i zostaje w ruchu; ekran logowania.</li>
+        <li><b>2–2,4 s</b> — dotknięcie przycisku: przycisk reaguje skalą, ekran wyjeżdża w lewo, kolejny wjeżdża z prawej.</li>
+        <li><b>2,7–5 s</b> — karty zamówień wchodzą jedna po drugiej z opóźnieniem 0,22 s, licznik sumy dobija do 4 380 zł.</li>
+        <li><b>5,2–6 s</b> — drugie dotknięcie i przejście na szczegóły.</li>
+        <li><b>6–7,1 s</b> — wykres rysuje się linią (SVG stroke-dashoffset), punkt końcowy pulsuje.</li>
+        <li><b>8,2–10 s</b> — telefon odjeżdża, wchodzi podpis.</li>
+      </ul>
+
+      <h2>Dlaczego kodem, a nie w After Effects</h2>
+      <ul>
+        <li><b>Ostrość.</b> Tekst i wektory renderują się natywnie w docelowej rozdzielczości — nie ma skalowania rastra, więc napisy są ostre tak samo w 1080 i w 4K.</li>
+        <li><b>Tanie poprawki.</b> „Przesuń panel o 20 px", „zmień kwotę", „dodaj czwartą kartę" to zmiana jednej liczby, nie przebudowa kompozycji. Przy trzech formatach tej samej reklamy to jest cała różnica w terminie.</li>
+        <li><b>Prawdziwe dane.</b> Layout może się wypełniać z pliku — jeśli kwot jest dwadzieścia, nie trzeba dwudziestu warstw.</li>
+        <li><b>Powtarzalność.</b> Ten sam kod daje ten sam wynik po miesiącu; nie ma „projektu, który nie chce się otworzyć".</li>
+      </ul>
+
+      <h2>Czego tu celowo nie ma</h2>
+      <ul>
+        <li>dźwięku — próba jest o ruchu i czytelności, muzykę dobiera się na końcu;</li>
+        <li>prawdziwej marki — to makieta neutralna, żeby nie sugerować cudzej realizacji jako naszej.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    <p><strong>Uczciwie:</strong> to jest makieta zbudowana przeze mnie, nie projekt z Figmy od klienta. Jeśli dostanę Państwa makietę — choćby jeden ekran z przejściem — zrobię z niej to samo w dobę i wtedy ocena będzie na Państwa materiale, a nie na moim.</p>
+    <p><strong>Formaty:</strong> ten sam layout renderuje się w pionie 9:16, kwadracie 1:1 i poziomie 16:9 bez przerabiania animacji — zmienia się rozmiar sceny, nie kompozycja.</p>
+  </div>
+
+</div>
+</body>
+</html>
