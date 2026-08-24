@@ -32,8 +32,8 @@
 <div class="wrap">
 
   <header>
-    <h1>Próba animacji interfejsu — 10 sekund</h1>
-    <p class="sub">Zrobiona na własnej makiecie, bez zobowiązań. 1080 × 1920, 50 kl/s.</p>
+    <h1>Próba animacji interfejsu — 9 sekund</h1>
+    <p class="sub">Zrobiona na własnej makiecie, bez zobowiązań. 1080 × 1920, 50 kl/s. Wersja druga — gęstsza.</p>
   </header>
 
   <div class="kol">
@@ -42,12 +42,21 @@
     <div>
       <h2>Co jest w środku</h2>
       <ul>
-        <li><b>0–2 s</b> — telefon wjeżdża w kadr z lekkim obrotem i zostaje w ruchu; ekran logowania.</li>
-        <li><b>2–2,4 s</b> — dotknięcie przycisku: przycisk reaguje skalą, ekran wyjeżdża w lewo, kolejny wjeżdża z prawej.</li>
-        <li><b>2,7–5 s</b> — karty zamówień wchodzą jedna po drugiej z opóźnieniem 0,22 s, licznik sumy dobija do 4 380 zł.</li>
-        <li><b>5,2–6 s</b> — drugie dotknięcie i przejście na szczegóły.</li>
-        <li><b>6–7,1 s</b> — wykres rysuje się linią (SVG stroke-dashoffset), punkt końcowy pulsuje.</li>
-        <li><b>8,2–10 s</b> — telefon odjeżdża, wchodzi podpis.</li>
+        <li><b>0–1,6 s</b> — telefon wjeżdża z obrotem i zostaje w ruchu, a pole logowania <b>samo się wpisuje</b> z migającym kursorem.</li>
+        <li><b>1,6–2 s</b> — dotknięcie: przycisk reaguje skalą, z punktu dotknięcia rozchodzi się fala, ekran <b>odwraca się w 3D</b> zamiast płasko odjechać.</li>
+        <li><b>2,2–3,5 s</b> — karty wchodzą co 0,18 s, potem <b>dobijają pružyną statusy</b> OPŁACONE i W REALIZACJI.</li>
+        <li><b>3,5–4,2 s</b> — licznik sumy dobija do 4 380 zł i na końcu krótko podskakuje.</li>
+        <li><b>4,6–5,3 s</b> — drugie dotknięcie z falą i obrót na szczegóły.</li>
+        <li><b>5,3–6,3 s</b> — wykres rysuje się linią, punkt końcowy pulsuje; potem wjeżdżają chipy.</li>
+        <li><b>7,3–9 s</b> — telefon odjeżdża, wchodzi podpis.</li>
+      </ul>
+
+      <h2>Co sprawia, że kadr żyje</h2>
+      <ul>
+        <li><b>Pływanie po wylądowaniu.</b> Każda karta po dojściu na miejsce nadal delikatnie oddycha, każda z własnym przesunięciem fazy. Bez tego kadr zamiera w sekundę po animacji.</li>
+        <li><b>Trójwymiar zamiast slajdu.</b> Ekrany się odwracają, nie przesuwają — płaski slide czyta się jak prezentacja, obrót czyta się jak interfejs.</li>
+        <li><b>Cień kontaktowy.</b> Telefon ma pod sobą cień, który oddycha w przeciwfazie: gdy urządzenie się unosi, cień jaśnieje i rozszerza się. To on sprawia, że przedmiot jest przedmiotem, a nie obrazkiem.</li>
+        <li><b>Tło w ruchu.</b> Siatka makiety powoli dryfuje, plama światła krąży — tło przestaje być tapetą.</li>
       </ul>
 
       <h2>Dlaczego kodem, a nie w After Effects</h2>
