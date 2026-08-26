@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rozeta 4K</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&family=Karla:wght@400;500;700&display=swap">
+<style>
+  :root{
+    color-scheme:dark;
+    --tlo:#0b0b0c; --panel:#141416; --linia:#2a2a2e;
+    --tekst:#eceae5; --cichy:#95928c; --zloto:#c9a227;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--tlo);color:var(--tekst);
+    font-family:"Karla",system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.62}
+  .wrap{max-width:940px;margin:0 auto;padding:48px 20px 88px}
+  .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--zloto);font-weight:700;margin:0 0 12px}
+  h1{font-family:"Spectral",Georgia,serif;font-weight:600;
+    font-size:clamp(25px,4.4vw,36px);line-height:1.2;margin:0 0 14px;
+    text-wrap:balance;max-width:19ch}
+  .lede{color:var(--cichy);font-size:16px;margin:0;max-width:60ch}
+  header{border-bottom:1px solid var(--linia);padding-bottom:30px;margin-bottom:42px}
+  h2{font-family:"Spectral",Georgia,serif;font-weight:600;font-size:20px;margin:0 0 12px}
+  section{margin-bottom:52px}
+  .para{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.para{grid-template-columns:1fr}}
+  figure{margin:0}
+  img{width:100%;display:block;border-radius:6px;border:1px solid var(--linia);background:#000}
+  figcaption{font-size:13px;color:var(--cichy);margin-top:9px}
+  figcaption b{color:var(--tekst);font-weight:700}
+  p{font-size:15px;max-width:64ch}
+  ul{margin:0;padding-left:18px}
+  li{margin-bottom:9px;font-size:15px}
+  li b{font-weight:700}
+  .uwaga{border-left:2px solid var(--zloto);padding:2px 0 2px 18px;margin:22px 0}
+  .uwaga p{margin:0;color:var(--cichy)}
+  .stopka{border-top:1px solid var(--linia);padding-top:24px;margin-top:44px;
+    font-size:14px;color:var(--cichy)}
+  .stopka b{color:var(--tekst)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">ZOVU · logo z generatora do wektora</p>
+    <h1>To samo logo dwa razy: raz z generatora, raz narysowane</h1>
+    <p class="lede">Klient przyszedł z pomysłem wygenerowanym w ChatGPT i chciał go mieć naprawdę — w wektorze, w druku, na aucie i na koszulce. Poniżej obie wersje obok siebie, w tej samej skali.</p>
+  </header>
+
+  <section>
+    <div class="para">
+      <figure>
+        <img src="logo_gen.jpg" alt="Logo 4K w wersji wygenerowanej — nierówne linie rozety">
+        <figcaption><b>Punkt wyjścia — generator.</b> Ładne w miniaturze. Po powiększeniu widać, że linie rozety gubią rytm, grubości pływają, a krzywe nie domykają się w tych samych punktach.</figcaption>
+      </figure>
+      <figure>
+        <img src="logo_wek.jpg" alt="Logo 4K po przerysowaniu do wektora — równa rozeta giloszowa">
+        <figcaption><b>Po przerysowaniu — wektor.</b> Rozeta zbudowana jako regularny gilosz, jedna grubość linii, symetria liczona a nie odrysowana. <a href="logo_4k.svg" style="color:var(--zloto)">Plik SVG</a> — można otworzyć i sprawdzić krzywe.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dlaczego „od nowa", a nie obrys automatem</h2>
+    <p>Automatyczna wektoryzacja obrysowuje piksele — łącznie z ich błędami. Wychodzi plik, który jest wektorem tylko z nazwy: setki punktów kontrolnych, krzywe drżące tam, gdzie generator drżał, i litery, których nie da się poprawić bez rysowania od zera. Widać to dopiero na dużym formacie, czyli zwykle po zapłaceniu za druk.</p>
+    <p>Rozetę wyżej zbudowałem od podstaw jako figurę geometryczną, a nie odrys. Dlatego można ją teraz zagęścić, rozrzedzić albo zmienić liczbę pętli jednym parametrem, a nie przerabiając plik.</p>
+  </section>
+
+  <section>
+    <h2>Co dostaje klient</h2>
+    <ul>
+      <li><b>SVG</b> — źródło, krzywe do edycji.</li>
+      <li><b>PDF i EPS</b> — dla drukarni, kolory w CMYK plus wersja w Pantone, jeśli będzie potrzebna.</li>
+      <li><b>PNG</b> w kilku rozmiarach, z przezroczystością.</li>
+      <li><b>Wersje</b>: pełna, uproszczona pod małe rozmiary, jednokolorowa czarna i biała, oraz w kontrze.</li>
+      <li><b>Pole ochronne i minimalny rozmiar</b> — jedna kartka, żeby logo nie było potem ściskane i doklejane byle gdzie.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>O słowie „legalnie"</h2>
+    <p>Rozumiem, skąd ono się bierze w ogłoszeniu, i traktuję je poważnie. Polskie prawo autorskie chroni utwór jako przejaw działalności <em>człowieka</em>. Grafika wyjęta wprost z generatora ma tu status niepewny, a przy zgłoszeniu znaku towarowego niepewność jest dokładnie tym, czego nie chcemy.</p>
+    <p>Kiedy znak jest narysowany ręką od nowa, powstaje utwór z konkretnym autorem — i wtedy jest co przenieść na klienta. W umowie przez Useme przenoszę majątkowe prawa autorskie do projektu i podpisuję oświadczenie, że jest wykonany samodzielnie.</p>
+    <div class="uwaga">
+      <p>Nie jestem prawnikiem i tak to mówię. Jeśli logo ma iść do rejestracji w Urzędzie Patentowym, warto dodatkowo zapytać rzecznika patentowego — również o badanie, czy podobny znak nie jest już zarejestrowany. To jest osobna rzecz od praw autorskich i osobna od mojej roboty.</p>
+    </div>
+  </section>
+
+  <div class="stopka">
+    <p><b>ZOVU</b> — Katowice. Realizacja: <b>4K</b>, serwis samochodowy — <a href="https://zovupl.github.io/4K" style="color:var(--zloto)">zovupl.github.io/4K</a><br>
+    Strona zrobiona pod jedno zapytanie, nie jest nigdzie linkowana.</p>
+  </div>
+
+</div>
+</body>
+</html>
