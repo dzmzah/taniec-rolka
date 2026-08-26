@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Postać AI w polskim mieszkaniu</title>
+<style>
+  :root{
+    color-scheme:dark;
+    --tlo:#0c0d10; --tlo2:#14161b; --linia:#23262e;
+    --tekst:#e8e6e1; --cichy:#8f939d; --akcent:#c8a45c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--tlo);color:var(--tekst);
+    font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;line-height:1.6}
+  .wrap{max-width:1000px;margin:0 auto;padding:44px 20px 90px}
+  header{border-bottom:1px solid var(--linia);padding-bottom:24px;margin-bottom:36px}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--akcent);margin:0 0 10px}
+  h1{font-size:24px;line-height:1.25;margin:0 0 10px;font-weight:600;letter-spacing:-.01em;text-wrap:balance}
+  .sub{color:var(--cichy);font-size:15px;margin:0;max-width:62ch}
+  h2{font-size:15px;font-weight:600;margin:0 0 14px;letter-spacing:.01em}
+  .klipy{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:14px}
+  @media(max-width:700px){.klipy{grid-template-columns:1fr}}
+  figure{margin:0}
+  video{width:100%;border-radius:10px;border:1px solid var(--linia);background:#000;display:block}
+  figcaption{font-size:13px;color:var(--cichy);margin-top:8px}
+  .blok{margin-top:40px;padding-top:28px;border-top:1px solid var(--linia)}
+  .dwie{display:grid;grid-template-columns:1fr 1fr;gap:38px}
+  @media(max-width:700px){.dwie{grid-template-columns:1fr;gap:26px}}
+  ul{margin:0;padding-left:18px}
+  li{margin-bottom:9px;font-size:14.5px}
+  li b{color:var(--tekst)}
+  p{font-size:14.5px;max-width:64ch}
+  .cichy{color:var(--cichy)}
+  .stopka{margin-top:44px;padding-top:24px;border-top:1px solid var(--linia);font-size:14px;color:var(--cichy)}
+  .stopka b{color:var(--tekst)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">ZOVU · wideo AI</p>
+    <h1>Ta sama postać, to samo mieszkanie, trzy ujęcia</h1>
+    <p class="sub">Nikt tego nie nagrał. Człowiek, wnętrze, blok za oknem i światło z okna są wygenerowane. Pokazuję trzy klipy obok siebie, bo trudność w wideo AI nie leży w jednym ładnym kadrze — tylko w tym, żeby twarz i pomieszczenie nie zmieniły się między ujęciami.</p>
+  </header>
+
+  <section>
+    <div class="klipy">
+      <figure>
+        <video src="ai_postac_1.mp4" controls preload="metadata" playsinline muted></video>
+        <figcaption>Ujęcie 1 — otwarcie, gest ręką w stronę obiektywu</figcaption>
+      </figure>
+      <figure>
+        <video src="ai_postac_2.mp4" controls preload="metadata" playsinline muted></video>
+        <figcaption>Ujęcie 2 — środek wypowiedzi</figcaption>
+      </figure>
+      <figure>
+        <video src="ai_postac_3.mp4" controls preload="metadata" playsinline muted></video>
+        <figcaption>Ujęcie 3 — akcent, palec w górę</figcaption>
+      </figure>
+    </div>
+    <p class="cichy">Każdy klip 8 s, pion 9:16. Zatrzymajcie je w tym samym momencie — znamiona na twarzy, regał z książkami, monstera i blok w oknie stoją na swoim miejscu w każdym z trzech.</p>
+  </section>
+
+  <div class="blok dwie">
+    <div>
+      <h2>Co tu jest polskie</h2>
+      <ul>
+        <li><b>Blok z wielkiej płyty za oknem</b> — nie amerykańskie przedmieście, nie szklany downtown.</li>
+        <li><b>Wnętrze mieszkania w bloku</b> — wąski salon, telewizor na komodzie, regał IKEA, roślina w rogu.</li>
+        <li><b>Zachowanie przed kamerą</b> — telefon w wyciągniętej ręce, kadr od dołu, brak studia. Tak nagrywa się u nas, a nie z gimbala.</li>
+        <li><b>Pochmurne, płaskie światło</b> — nie złota godzina z generatora.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Czego tu celowo nie ma</h2>
+      <ul>
+        <li>Ani jednej animowanej planszy z napisami. Wiem, że o to Panu <em>nie</em> chodzi — to zrobi każdy w Canvie.</li>
+        <li>Grafiki 3D i kreskówek. Robimy je, ale to inna działka i tutaj byłyby ściemą.</li>
+        <li>Dźwięku. Włączcie sobie z głosem, jeśli chcecie — ale oceniajcie obraz. Głos to osobna rozmowa i osobne narzędzie.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="blok">
+    <h2>Jak to powstaje</h2>
+    <p>Storyboard rozbity na ujęcia po ~8 s, bo tyle wynosi realny limit generacji. Postać ustalana raz i trzymana referencją między ujęciami — to jest miejsce, w którym większość realizacji się sypie i twarz zaczyna „pływać”. Montaż, napisy i dźwięk już po naszej stronie, nie w generatorze.</p>
+    <p class="cichy">Materiał powyżej to nasza własna produkcja wewnętrzna — dlatego mogę go pokazać bez pytania kogokolwiek o zgodę.</p>
+  </div>
+
+  <div class="stopka">
+    <p><b>ZOVU</b> — studio treści wideo. Katowice.<br>
+    Ta strona powstała pod jedno konkretne zapytanie i nie jest nigdzie linkowana.</p>
+  </div>
+
+</div>
+</body>
+</html>
